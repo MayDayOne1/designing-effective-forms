@@ -16,11 +16,14 @@
 <body>
     <div class="container">
         <h1>Uzupełnij formularz</h1>
-        <form id="form">
+        <form class="needs-validation" id="form" novalidate>
             <div class="input-group mb-3">
                 <div class="form-floating">
-                    <input type="text" class="form-control" id="firstName" placeholder="Wpisz imię" required autofocus>
+                    <input type="text" class="form-control has-validation" id="firstName" placeholder="Wpisz imię" required autofocus>
                     <label for="firstName" class="form-label">Imię</label>
+                    <div class="invalid-feedback">
+                        Niedobrze
+                    </div>
                 </div>
                 <div class="form-floating">
                     <input type="text" class="form-control" id="lastName" placeholder="Wpisz nazwisko" required>
@@ -130,7 +133,7 @@
                 <label class="form-check-label" for="vatUE">VAT UE</label>
             </div>
             <div class="mb-3">
-                <label for="vatNumber" class="form-label">VAT Number</label>
+                <label for="vatNumber" class="form-label">Numer VAT</label>
                 <input type="text" class="form-control" id="vatNumber" aria-describedby="vatHelp">
                 <div id="vatHelp" class="form-text">Kod kraju państwa członkowskiego i seria cyfr unikalnych dla tego
                     podmiotu gospodarczego.</div>
